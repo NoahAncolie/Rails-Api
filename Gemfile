@@ -10,7 +10,7 @@ gem 'faker'
 gem "rails", "~> 7.0.3"
 
 # Use sqlite3 as the database for Active Record
-gem "sqlite3", "~> 1.4"
+
 
 # Use the Puma web server [https://github.com/puma/puma]
 gem "puma", "~> 5.0"
@@ -45,8 +45,14 @@ group :development, :test do
 end
 
 group :development do
+gem "sqlite3", "~> 1.4"
   # Speed up commands on slow machines / big apps [https://github.com/rails/spring]
   # gem "spring"
+end
+
+group :production do
+  gem 'pg',             '0.17.1'
+  gem 'rails_12factor', '0.0.2'
 end
 
 
