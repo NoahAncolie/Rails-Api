@@ -8,5 +8,5 @@
 
 
 30.times do 
-    Article.create(title: Faker::Artist.name, content: Faker::Quote.matz)
+    Article.create(title: Faker::Artist.name, content: Faker::Quote.matz, user_id: 1)
 end
