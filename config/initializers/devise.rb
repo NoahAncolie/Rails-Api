@@ -10,7 +10,7 @@
 # Many of these configuration options can be set straight in your model.
 Devise.setup do |config|
   config.jwt do |jwt|
-		jwt.secret = "3f80531b0981b76c3eec6b52eb2793ef03737ab00434408440945fb6bc9a4185d1600e10383552025870218e87b1316174c2dd7ec140e66cb6185fd483e5f83b"
+		jwt.secret =  ENV[JWT_KEY]
 	end
   # The secret key used by Devise. Devise uses this key to generate
   # random tokens. Changing this key will render invalid all existing
